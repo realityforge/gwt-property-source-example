@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='example'>
+  <inherits name="com.google.gwt.user.User"/>
+  <inherits name="com.google.gwt.logging.Logging"/>
+  <inherits name="com.github.legioth.propertysource.PropertySource"/>
+  <add-linker name="xsiframe"/>
+
+  <entry-point class='org.realityforge.gwt.propertysource.example.client.Example'/>
+
+  <source path='client'/>
+
+  <define-property values="true,false" name="foo.bool"/>
+  <set-property name="foo.bool" value="false"/>
+
+  <define-property values="string1,string2" name="foo.string"/>
+
+  <extend-property values="string3" name="foo.string"/>
+
+  <set-property name="foo.string" value="string1"/>
+
+  <define-configuration-property name="foo.multiConf" is-multi-valued="true"/>
+  <extend-configuration-property name="foo.multiConf" value="Conf1"/>
+  <extend-configuration-property name="foo.multiConf" value="Conf3"/>
+
+  <define-configuration-property name="foo.singleConf" is-multi-valued="false"/>
+  <set-configuration-property name="foo.singleConf" value="Single1"/>
+  <set-configuration-property name="foo.singleConf" value="Single2"/>
+
+</module>
