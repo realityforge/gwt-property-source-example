@@ -7,54 +7,37 @@ import com.google.gwt.core.shared.GWT;
 
 public class UserAgentPermutation
 {
-  @Property("user.agent")
+  @Property( "user.agent" )
   interface Properties
     extends PropertySource
   {
-    @BooleanConversion(truePattern = "gecko.*")
+    @BooleanConversion( truePattern = "gecko.*" )
     boolean isGecko();
 
-    @BooleanConversion(trueValues = "safari")
+    @BooleanConversion( trueValues = "safari" )
     boolean isSafari();
 
-    @BooleanConversion(trueValues = "opera")
+    @BooleanConversion( trueValues = "opera" )
     boolean isOpera();
 
-    @BooleanConversion(truePattern = "ie\\d+")
+    @BooleanConversion( truePattern = "ie\\d+" )
     boolean isIe();
 
-    @BooleanConversion(trueValues = "ie6")
+    @BooleanConversion( trueValues = "ie6" )
     boolean isIe6();
 
-    @BooleanConversion(trueValues = "ie8")
+    @BooleanConversion( trueValues = "ie8" )
     boolean isIe8();
 
-    @BooleanConversion(trueValues = "ie9")
+    @BooleanConversion( trueValues = "ie9" )
     boolean isIe9();
 
     String name();
   }
 
-  private static Properties devModeCache;
-
   private static Properties get()
   {
-    if ( GWT.isProdMode() )
-    {
-      // GWT compiler inlines these, but it could inline if the null check
-      // was here
-      return GWT.create( Properties.class );
-    }
-    else
-    {
-      // Use same instance every time in devmode to avoid creating new
-      // object every time
-      if ( devModeCache == null )
-      {
-        devModeCache = GWT.create( Properties.class );
-      }
-      return devModeCache;
-    }
+    return GWT.create( Properties.class );
   }
 
   public static boolean isGecko()
