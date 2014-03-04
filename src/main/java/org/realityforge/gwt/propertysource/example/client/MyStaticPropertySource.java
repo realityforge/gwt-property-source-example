@@ -8,37 +8,37 @@ import java.util.List;
 
 @Namespace("foo")
 public interface MyStaticPropertySource extends PropertySource {
-    public boolean bool();
+    boolean bool();
 
-    public String string();
+    String string();
 
-    public String singleConf();
+    String singleConf();
 
-    public List<String> multiConf();
+    List<String> multiConf();
 
     @Property("foo.string")
     @BooleanConversion(truePattern = ".*[1,3]")
-    public boolean isString1or3();
+    boolean isString1or3();
 
     @Property("user.agent")
-    public String userAgent();
+    String userAgent();
 
     @Property("user.agent")
     @BooleanConversion(trueValues = { "gecko1_8", "safari" })
-    public boolean isOpenSourceEngine();
+    boolean isOpenSourceEngine();
 
     @Property("user.agent")
     @BooleanConversion(truePattern = "ie\\d+")
-    public boolean isIE();
+    boolean isIE();
 
     @Property("foo.singleConf")
-    public List<String> singleAsList();
+    List<String> singleAsList();
 
     @Property("foo.multiConf")
     @BooleanConversion(trueValues = { "Conf1", "Conf2" })
-    public boolean multiContains1or2();
+    boolean multiContains1or2();
 
     @Property("foo.multiConf")
     @BooleanConversion(trueValues = { "Conf1", "Conf2" }, matchAll = true)
-    public boolean multiContains1and2();
+    boolean multiContains1and2();
 }
