@@ -1,9 +1,9 @@
 package org.realityforge.gwt.propertysource.example.client;
 
-import com.github.legioth.propertysource.client.PropertySource;
-import com.github.legioth.propertysource.client.annotations.BooleanConversion;
-import com.github.legioth.propertysource.client.annotations.Property;
 import com.google.gwt.core.shared.GWT;
+import org.realityforge.gwt.propertysource.client.PropertySource;
+import org.realityforge.gwt.propertysource.client.annotations.BooleanConversion;
+import org.realityforge.gwt.propertysource.client.annotations.Property;
 
 public class UserAgentPermutation
 {

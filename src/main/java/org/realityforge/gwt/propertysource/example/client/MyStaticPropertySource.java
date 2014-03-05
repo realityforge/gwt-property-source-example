@@ -1,10 +1,10 @@
 package org.realityforge.gwt.propertysource.example.client;
 
-import com.github.legioth.propertysource.client.PropertySource;
-import com.github.legioth.propertysource.client.annotations.BooleanConversion;
-import com.github.legioth.propertysource.client.annotations.Namespace;
-import com.github.legioth.propertysource.client.annotations.Property;
 import java.util.List;
+import org.realityforge.gwt.propertysource.client.PropertySource;
+import org.realityforge.gwt.propertysource.client.annotations.BooleanConversion;
+import org.realityforge.gwt.propertysource.client.annotations.Namespace;
+import org.realityforge.gwt.propertysource.client.annotations.Property;
 
 @Namespace("foo")
 public interface MyStaticPropertySource

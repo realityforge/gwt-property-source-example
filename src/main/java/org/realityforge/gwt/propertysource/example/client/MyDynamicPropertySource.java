@@ -1,9 +1,9 @@
 package org.realityforge.gwt.propertysource.example.client;
 
-import com.github.legioth.propertysource.client.DynamicPropertySource;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import org.realityforge.gwt.propertysource.client.DynamicPropertySource;
 
 public class MyDynamicPropertySource
   extends DynamicPropertySource
