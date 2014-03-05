@@ -2,7 +2,7 @@
 <module rename-to='example'>
   <inherits name="com.google.gwt.user.User"/>
   <inherits name="com.google.gwt.logging.Logging"/>
-  <inherits name="com.github.legioth.propertysource.PropertySource"/>
+  <inherits name="org.realityforge.gwt.propertysource.PropertySource"/>
   <add-linker name="xsiframe"/>
 
   <entry-point class='org.realityforge.gwt.propertysource.example.client.Example'/>
