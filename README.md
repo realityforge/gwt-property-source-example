@@ -8,6 +8,6 @@ A sample application that demonstrates the use of the [gwt-property-source](http
 Credit
 ======
 
-This code was originally extracted from PropertySource repository [1] created by Leif Åstrand.
+This code was originally extracted from the PropertySource repository [1] created by Leif Åstrand. All credit for the idea and code goes to him. All bugs and problems introduced subsequently are my fault, please raise a GitHub issue.
 
 [1] https://github.com/Legioth/PropertySource
