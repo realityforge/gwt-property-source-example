@@ -5,14 +5,14 @@ desc 'A simple application demonstrating the use of the gwt-propertysource libra
 define 'gwt-property-source-example' do
   project.group = 'org.realityforge.gwt.propertysource.example'
 
-  compile.options.source = '1.7'
-  compile.options.target = '1.7'
+  compile.options.source = '1.8'
+  compile.options.target = '1.8'
   compile.options.lint = 'all'
 
   compile.with :gwt_property_source, :javax_annotation, :javax_javaee, :gwt_user
 
-  gwt_dir = gwt(["org.realityforge.gwt.propertysource.example.Example"],
-                :java_args => ["-Xms512M", "-Xmx1024M", "-XX:PermSize=128M", "-XX:MaxPermSize=256M"],
+  gwt_dir = gwt(['org.realityforge.gwt.propertysource.example.Example'],
+                :java_args => %w(-Xms512M -Xmx1024M),
                 :draft_compile => (ENV["FAST_GWT"] == 'true'),
                 :dependencies => [:javax_validation, :javax_validation_sources] + project.compile.dependencies)
 
